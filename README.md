@@ -72,3 +72,4 @@
 -   [코딩테스트 고득점 kit](https://covenant.tistory.com/145) (이분 블로그에 다른 문제집도 많습니다.)
 -   [백준 그룹](https://www.acmicpc.net/group/17444)
 -   [노션 링크](https://maroon-office-dea.notion.site/DS-SW-C-5892c113e16f4c7a9a3b7de4a1a0f1c9)
+🤔 노션에 맨날맨날 햇는지 체크 하는걸 올릴까요 성취도 측면에서? 깃헙 요 페이지로 지금 노션의 용도가 
