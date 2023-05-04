@@ -3,26 +3,36 @@
 #include <vector>
 using namespace std;
 
+bool isused1[40];
+bool isused2[40];
+bool isused3[40];
+
+int cnt = 0;
 int n;
-int count = 0;
-int flag1[16] = {0, };//flag[x] = 0이면 x번째 열에는 1이 없음
-int flag2[]
-int map[16][16] = {0,};
+
 
 /*
  1. 한 행이랑 열이 다 0이면 돌을 놓고 다음 행(재귀)시작
 
 */
-void func(int k)
+void func(int cur) // cur번째 행에 말을 배치
 {
-    if(k == m)
+    if(cur == n)
     {
-        count++;
+        cnt++;
         return;
     }
     for(int i = 0; i < n; i++)
     {
-        if(map)
+        if(isused1[i] || isused2[i+cur] || isused3[cur-i+n-1])
+            continue;
+        isused1[i] = 1;
+        isused2[i+cur] = 1;
+        isused3[cur-i+n-1] = 1;
+        func(cur+1);
+        isused1[i] = 0;
+        isused2[i+cur] = 0;
+        isused3[cur-i+n-1] = 0;
     }
 
 }
@@ -30,9 +40,7 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
     cin>>n;
-
     func(0);
-
-
+    cout<<cnt;
     return 0;
 }
